@@ -2,7 +2,6 @@
 Resource  ../pageObjects/signInPage.robot
 
 Suite Setup  Open My Website
-
 Suite Teardown  Close browser
 
 *** Test Cases ***
