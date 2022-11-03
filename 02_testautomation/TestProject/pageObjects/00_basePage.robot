@@ -1,6 +1,7 @@
 *** Settings ***
 Resource  ../helpers/browser.robot
-Resource  02_accountPage.robot
+Resource  01_registerPage.robot
+Resource  02_loginPage.robot
 Resource  03_transactionsPage.robot
 
 *** Keywords ***
@@ -11,7 +12,7 @@ Open My Website
 
 Wait For Page
      Wait For Condition	return document.readyState == "complete"
-     Sleep  1.5s
+     Sleep  5s
 
 Wait For Page With Element
     [Arguments]  ${element}
@@ -22,3 +23,8 @@ Click And Input
     [Arguments]  ${location}  ${input}
     Click Element  ${location}
     Input Text  ${location}  ${input}
+
+Wait And Click
+    [Arguments]  ${element}
+    Sleep  5s
+    Click Element  ${element}

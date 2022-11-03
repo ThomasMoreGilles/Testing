@@ -1,5 +1,5 @@
 *** Settings ***
-Resource            ../pageObjects/01_basePage.robot
+Resource            ../pageObjects/00_basePage.robot
 
 Suite Setup  Open My Website
 Suite Teardown  Close browser
@@ -27,7 +27,7 @@ Add Credits With Negative Amount
     Add Credits  -5
     ${creditsAfter}=  Check Credits
     ${difference}=  Difference Before After  ${creditsBefore}  ${creditsAfter}
-    Should Be Equal As Strings    ${amount}    ${difference}
+    Should Not Be Equal As Strings    ${amount}    ${difference}
 
 Add Credits With Large Amount
     Login Account  ${email}  ${password}
@@ -36,4 +36,4 @@ Add Credits With Large Amount
     Add Credits  99999999999999
     ${creditsAfter}=  Check Credits
     ${difference}=  Difference Before After  ${creditsBefore}  ${creditsAfter}
-    Should Be Equal As Strings    ${amount}    ${difference}
+    Should Not Be Equal As Strings    ${amount}    ${difference}

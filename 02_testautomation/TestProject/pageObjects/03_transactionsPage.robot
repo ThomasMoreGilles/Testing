@@ -1,5 +1,5 @@
 *** Settings ***
-Resource  01_basePage.robot
+Resource  00_basePage.robot
 
 *** Variables ***
 # Buttons
