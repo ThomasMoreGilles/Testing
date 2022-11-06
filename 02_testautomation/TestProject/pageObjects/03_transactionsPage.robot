@@ -4,7 +4,7 @@ Resource  00_basePage.robot
 *** Variables ***
 # Buttons
 ${addCredits}=              //button[contains(normalize-space(),'add credits')]
-${submit}=                  //button[normalize-space(@type)='submit']
+${submitCredits}=           //button[normalize-space(@type)='submit']
 # Input
 ${amount}=                  //input[contains(normalize-space(@name),'amount')]
 # Credits
@@ -13,7 +13,7 @@ ${credits}=                 class:css-cpr2ex
 *** Keywords ***
 Go To Profile Page
     Go To    ${BASE_URL}profile
-    Wait For Page With Element  ${AddCredits}
+    Wait For Page With Element  ${addCredits}
 
 Check Credits
     Go To Profile Page
@@ -24,7 +24,7 @@ Add Credits
     Wait For Page With Element  ${addCredits}
     Click Element  ${addCredits}
     Click And Input  ${amount}  ${creditsToAdd}
-    Click Element  ${submit}
+    Click Element  ${submitCredits}
 
 Difference Before After
     [Arguments]  ${creditsBefore}  ${creditsAfter}

@@ -19,7 +19,7 @@ Go To Register Page
 Create Account
     Go To Register Page
     [Arguments]  ${firstNameInput}=${EMPTY}  ${lastNameInput}=${EMPTY}  ${emailInput}=${EMPTY}  ${passwordInput}=${EMPTY}
-    Wait For Page With Element  ${submit}
+    Wait For Page With Element  ${submitRegister}
     Click And Input  ${firstNameRegister}  ${firstNameInput}
     Click And Input  ${lastNameRegister}  ${lastNameInput}
     Click And Input  ${emailRegister}  ${emailInput}

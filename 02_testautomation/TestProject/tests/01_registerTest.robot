@@ -6,7 +6,7 @@ Suite Teardown  Close browser
 
 *** Variables ***
 ${inCorrect}=       f#`+
-${@}=            @gmail.com
+${@}=               @gmail.com
 
 *** Keywords ***
 Random String

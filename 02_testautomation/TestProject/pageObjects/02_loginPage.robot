@@ -17,7 +17,7 @@ Go To Signin Page
 Login Account
     Go To Signin Page
     [Arguments]  ${emailInput}=${EMPTY}  ${passwordInput}=${EMPTY}
-    Wait For Page With Element  ${submit}
+    Wait For Page With Element  ${submitLogin}
     Click And Input  ${emailLogin}  ${emailInput}
     Click And Input  ${passwordLogin}  ${passwordInput}
     Wait And Click  ${submitLogin}
